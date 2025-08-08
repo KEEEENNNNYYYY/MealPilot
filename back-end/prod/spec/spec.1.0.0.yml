@@ -7,7 +7,7 @@ paths:
   /recipes:
     get:
       summary: Récupérer toutes les recettes
-      description: Retourne la liste complète des plats disponibles.
+      description: Retourne la liste complète des recettes avec les détails nécessaires pour apprendre à les cuisiner.
       responses:
         '200':
           description: Liste des recettes.
@@ -18,21 +18,18 @@ paths:
                 items:
                   type: object
                   properties:
-                    id:
-                      type: integer
-                      example: 1
                     nom:
                       type: string
-                      example: Pizza Margherita
+                      example: Spaghetti Carbonara
                     description:
                       type: string
-                      example: Pizza classique avec sauce tomate, mozzarella et basilic frais.
-                    prix:
+                      example: Recette italienne à base de pâtes, œufs, fromage et pancetta.
+                    cout_total:
                       type: number
                       format: float
-                      example: 12.5
-                    disponible:
-                      type: boolean
-                      example: true
+                      example: 8.50
+                    temps_preparation_total:
+                      type: string
+                      example: "30 minutes"
         '500':
           description: Erreur interne du serveur.
