@@ -1,0 +1,38 @@
+openapi: 3.0.3
+info:
+  title: MealPilot APi
+  version: 1.0.0
+  description: API montrant les endpoints de l'application MealPilot
+paths:
+  /recipes:
+    get:
+      summary: Récupérer toutes les recettes
+      description: Retourne la liste complète des plats disponibles.
+      responses:
+        '200':
+          description: Liste des recettes.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    nom:
+                      type: string
+                      example: Pizza Margherita
+                    description:
+                      type: string
+                      example: Pizza classique avec sauce tomate, mozzarella et basilic frais.
+                    prix:
+                      type: number
+                      format: float
+                      example: 12.5
+                    disponible:
+                      type: boolean
+                      example: true
+        '500':
+          description: Erreur interne du serveur.
