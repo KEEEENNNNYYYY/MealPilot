@@ -1,0 +1,13 @@
+/* ===== Base ===== */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #c09843;
+    color: #ffff;
+}
+
+.logo {}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {}
